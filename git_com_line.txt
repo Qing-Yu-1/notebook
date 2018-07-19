@@ -21,7 +21,9 @@ git log –pretty=format:”” -1
 git log –pretty=format:”” –name-only -1 
 github仓库：https://github.com/Qing-Yu-1/programme_python.git
 
-添加远程仓库：git remote add origin https://github.com/Qing-Yu-1/programme_python.git 
+使用http方式添加远程仓库：git remote add origin https://github.com/Qing-Yu-1/programme_python.git 
+更换并使用ssh的链接方式：git remote rm origin
+						git remote add origin git@github.com:账户名/项目名.git　　　
 推送到远程仓库：git push -u origin master
 
 
