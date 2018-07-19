@@ -26,6 +26,8 @@ github仓库：https://github.com/Qing-Yu-1/programme_python.git
 						git remote add origin git@github.com:账户名/项目名.git　　　
 推送到远程仓库：git push -u origin master
 
+撤销操作的语法：
+git checkout – 文件名　链接：https://blog.csdn.net/qq_28602957/article/details/70194216
 
 
 echo "# notebook" >> README.md
