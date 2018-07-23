@@ -15,6 +15,21 @@ vlc播放功能还是很强大的，播放列表很好用<Br/>
 `sudo pip install grip`<Br>
 `grip ssd.md(文件) `<Br>
 
+git上的md页面可以直接通过浏览器打印成pdf格式<Br/>
+
+百度云盘上传：bypy<Br/>
+https://github.com/houtianze/bypy/blob/master/README.md<Br/>
+由于百度PCS API权限限制，程序只能存取百度云端/apps/bypy目录下面的文件和目录。我们可以通过<Br/>
+`bypy list`显示在云盘（程序的）根目录下文件列表<Br/>
+把当前目录同步到云盘：`bypy upload`<Br/>
+把云盘内容同步到本地来： <Br/>
+```
+bypy downdir /
+```
+比较本地当前目录和云盘（程序的）根目录（个人认为非常有用）：<Br/>
+```
+bypy compare
+```
 
 
 
