@@ -1,4 +1,197 @@
-7.19
+修复挂载错误的相应的分区如提示中的/dev/sda6，输入修复命令：
+`sudo ntfsfix /dev/sda9`
+
+ctrl+alt+t打开终端
+
+更新ubuntu系统的apt资源。
+`$sudo apt-get  update `
+
+进行ubuntu系统与软件更新。
+`$sudo  apt-get upgrade`
+
+`apt-get -f install`(帮你自动安装需要的依赖)
+
+Ubuntu更改密码步骤：
+1、进入Ubuntu，打开一个终端，输入 sudo su转为root用户。 注意，必须先转为root用户！！！
+2、`sudo passwd user`(user 是对应的用户名)
+3、输入新密码，确认密码。
+4、修改密码成功，重启，输入新密码进入Ubuntu
+
+
+为火狐浏览器安转flash插件
+`sudo apt-get install flashplugin-nonfree`
+
+Ubuntu(Linux)开机自动挂载磁盘:
+编辑/etc/fstab文件
+在终端输入`sudo gedit /etc/fstab `
+打开fstab文件
+添加分区
+在末行加上
+`/dev/sdb1 /media/C ntfs defaults 0 0`
+`/dev/sdb5 /media/D ntfs defaults 0 0`
+这里的sdb对应你的分区，media对应要挂载到的目录，ntfs是分区的文件类型
+
+rm 删除目录及文件:
+语法：rm [选项] 文件
+短选项 长选项 含义
+-f –force 忽略不存在的文件，强制删除，无任何提示。
+-i –interactive 进行交互式删除
+-r –recursive 递归式删除（本目录下）全部文件和目录
+-v –verbose 详细显示进行的步骤
+格式：rm -rf dir
+强行删除目录dir下的所有文件、子目录下的所有文件和目录、删除dir本身
+
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh #从网址上下载
+bash Miniconda3-latest-Linux-x86_64.sh
+Do you wish the installer to prepend the Miniconda3 install location
+to PATH in your /home/qy/.bashrc ? [yes|no]
+sudo apt-get install git
+cd gluon-tutorials-zh
+ bash
+ conda env create -f environment.yml 
+Successfully installed chardet-3.0.4 graphviz-0.8.1 idna-2.6 mxnet-1.2.0b20180314 numpy-1.13.3 requests-2.18.4 urllib3-1.22
+##################################################################
+export PATH="/home/qy/software/anaconda3/bin:$PATH"
+source activate gluon # 注意 Windows 下不需要 source
+jupyter notebook --NotebookApp.contents_manager_class='notedown.NotedownContentsManager'
+#下载皮卡丘，启动 jupyter notebook时 用下面的命令
+MXNET_GLUON_REPO=https://apache-mxnet.s3.cn-north-1.amazonaws.com.cn/ jupyter notebook --NotebookApp.contents_manager_class='notedown.NotedownContentsManager'
+###################################################################
+pip install https://github.com/mli/notedown/tarball/master
+Successfully installed notedown-1.5.0 pandoc-attributes-0.1.7
+
+sudo apt-get autoremove i8kmon
+
+安装虚拟网卡：
+sudo apt-get install miredo
+
+查看当前版本
+lsb_release -a
+查看当前显卡驱动的型号
+lspci -vnn | grep VGA -A 12
+查看csdn收藏
+https://my.csdn.net/my/favorite
+
+qy@QY:~$ pip -V  #查看pip的型号和路经   python pip是一个安装和管理 Python 包的工具
+pip 8.1.1 from /usr/lib/python2.7/dist-packages (python 2.7)
+qy@QY:~$ pip install pyyaml
+
+更新 .bashrc文件后需要关闭终端再打开新的终端，pip只把软件安装导对应版本的软件包，可用当前pip -V 查看当前python的位置和版本
+
+列出摄像头的像素和帧率的情况v4l2 (video for linux)
+qy@QY:~$ v4l2-ctl --list-formats-ext 
+安装：qy@QY:~$ sudo apt install v4l-utils 
+
+运行languch文件
+qy@QY:~$ roslaunch usb_cam usb_cam-test.launch 
+
+将下载的包放进（ros）scr文件夹，解压，
+在/home/qy/catkin_ws 路径下执行catkin_make命令，将生成build和devel 文件，然后将devel文件下的setup.bash文件的路径添加导系统路径即添加到.bashrc文件即可，.bashrc在/home/qy 的路径下，是个隐藏文件
+##
+在当前终端中输入：export PATH=$PATH:<你的要加入的路径>
+不过上面的方法只适用于当前终端，一旦当前终端关闭或在另一个终端中，则无效。
+###
+9. 清洁系统
+$ sudo apt-get clean
+$ sudo apt-get autoclean
+$ sudo aptitude clean
+$ sudo aptitude autoclean
+
+出现错误：
+E: 无法下载 store:/var/lib/apt/lists/partial/mirrors.tuna.tsinghua.edu.cn_ubuntu_dists_xenial-proposed_main_dep11_icons-64x64.tar.gz  Hash 校验和不符
+E: 部分索引文件下载失败。如果忽略它们，那将转而使用旧的索引文件。
+
+解决方法：
+将其他软件的框选去掉，在软件和更新界面中
+
+蓝色的字体是文件夹，复制时需要用cp -r 
+
+
+#配置anaconda 源
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+#安装anaconda
+ ./Anaconda3-5.1.0-Linux-x86_64.sh
+
+查看当前python的搜索路径
+>>> import sys
+>>> print('\n'.join(sys.path))
+将sys的一个搜索路径移除
+sys.path.remove('/opt/ros/kinetic/lib/python2.7/dist-packages')
+
+pip install xxxx.whl  #安装.whl文件
+
+cmake编译：cmake . # cmake path/to/.cpp
+make
+
+在 linux 平台下使用 CMake 生成 Makefile 并编译的流程如下:
+
+１．编写 CmakeLists.txt。
+２．执行命令“cmake PATH”或者“ccmake PATH”生成 Makefile ( PATH 是 CMakeLists.txt 所在的目录 )。
+３．使用 make 命令进行编译。
+
+查看视频设备/dev/video0　支持的格式
+v4l2-ctl -d /dev/video0 --list-formats-ext
+
+
+开启两个摄像头出现：VIDIOC_STREAMON: No space left on device　
+可以应用：以下两条命令：
+sudo rmmod uvcvideo
+sudo modprobe uvcvideo quirks=128
+
+cv2的路径：/home/qy/software/anaconda3/envs/machineLearning/lib/python3.6/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so
+
+sudo apt install htop 
+htop 是一个任务管理器的显示
+
+全网桌面远程桌面连接。
+teamviewer #直接输入teamviewer就行了
+
+im2rec.py 使用python3 cv2 ,下面的是用法，默认rec文件中图片是打乱的　
+usage: im2rec.py [-h] [--list] [--exts EXTS [EXTS ...]] [--chunks CHUNKS]
+                 [--train-ratio TRAIN_RATIO] [--test-ratio TEST_RATIO]
+                 [--recursive] [--no-shuffle] [--pass-through]
+                 [--resize RESIZE] [--center-crop] [--quality QUALITY]
+                 [--num-thread NUM_THREAD] [--color {-1,0,1}]
+                 [--encoding {.jpg,.png}] [--pack-label]
+                 prefix root
+
+qy@QY:~/下载/mxnet-im2rec_tutorial-master$ ~/software/anaconda3/envs/mxnet/bin/python im2rec.py  --pack-label dataset ./pic_select
+Creating .rec file from /home/qy/下载/mxnet-im2rec_tutorial-master/dataset.lst in /home/qy/下载/mxnet-im2rec_tutorial-master
+multiprocessing not available, fall back to single threaded encoding
+time: 0.012691259384155273  count: 0
+
+vscode 解决跳转问题：在browse 中加入opencv的路径
+"browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "/usr/include/c++/5",
+                    "/usr/include/x86_64-linux-gnu/c++/5",
+                    "/usr/include/c++/5/backward",
+                    "/usr/lib/gcc/x86_64-linux-gnu/5/include",
+                    "/usr/local/include",
+                    "/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed",
+                    "/usr/include/x86_64-linux-gnu",
+                    "/usr/include",
+                    "/usr/opencv34/include/opencv2",
+                    "/usr/opencv34/include"
+                ]
+
+录屏软件：
+打开SimpleScreenRecorder
+点击左上角启动器，在查找框输入：sim
+
+鼠标手势插件：crxMouse chrome
+打开新标签的插件：Ｔab Position Customizer2
+
+创建一个空文件夹：
+echo a 2>a.txt 　#
+
+这个好像是百度的xx码:
+TJ-QnJuVTZYZXJMQzdCaDMzb1ZtUWRDY0pjcjFhYX5LY2FsN0VRaGlNfkN5WEpiQVFBQUFBJCQAAAAAAAAAAAEAAACO~tNVuNbS5Dk5OQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMI8S1vCPEtba
+
+##################################################################7.19
 安装插件：Octotree 链接：https://github.com/buunguyen/octotree
 
 安装插件：github-plus　可以方便在github上下载单个文件
@@ -14,7 +207,10 @@
 
 vlc播放功能还是很强大的，播放列表很好用
 测试一下
-
+################################################################7.23
+`grip`可以在浏览器中查看git中的md格式的文档,然后用浏览器的pdf打印功能转换为PDF文件
+`sudo pip install grip`
+`grip ssd.md(文件) `
 
 
 

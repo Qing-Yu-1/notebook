@@ -29,6 +29,8 @@ github仓库：https://github.com/Qing-Yu-1/programme_python.git
 撤销操作的语法：
 git checkout – 文件名　链接：https://blog.csdn.net/qq_28602957/article/details/70194216
 
+从github合并到本地文件：$ git pull origin master
+
 
 echo "# notebook" >> README.md
 git init
