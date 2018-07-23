@@ -30,7 +30,13 @@ bypy downdir /
 ```
 bypy compare
 ```
+linux apt-cache使用方法<Br/>
+apt-cache是linux下的一个apt软件包管理工具，它可查询apt的二进制软件包缓存文件。APT包管理的大多数信息查询功能都可以由apt-cache命令实现,通过apt-cache命令配合不同的子命令和参数的使用,可以实现查找,显示软件包信息及包依赖关系等功能.<Br/>
 
+1> `apt-cache show package_name`<Br/>
+显示指定软件包的信息，包括版本号，安装状态和包依赖关系等.<Br/>
+2> `apt-cache search package_name`<Br/>
+搜索软件包，可以按关键字查找软件包,通常用于查询的关键字会使用软件包的名字或软件包的一部分.
 
 
 
