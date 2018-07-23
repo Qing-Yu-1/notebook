@@ -208,9 +208,9 @@ TJ-QnJuVTZYZXJMQzdCaDMzb1ZtUWRDY0pjcjFhYX5LY2FsN0VRaGlNfkN5WEpiQVFBQUFBJCQAAAAAA
 vlc播放功能还是很强大的，播放列表很好用
 测试一下
 ################################################################7.23
-`grip`可以在浏览器中查看git中的md格式的文档,然后用浏览器的pdf打印功能转换为PDF文件
-`sudo pip install grip`
-`grip ssd.md(文件) `
+`grip`可以在浏览器中查看git中的md格式的文档,然后用浏览器的pdf打印功能转换为PDF文件<Br/>
+`sudo pip install grip`<Br>
+`grip ssd.md(文件) `<Br>
 
 
 
