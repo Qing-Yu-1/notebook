@@ -42,3 +42,6 @@ git push -u origin master
 …or push an existing repository from the command line
 git remote add origin https://github.com/Qing-Yu-1/notebook.git
 git push -u origin master
+
+my common profile
+git@github.com:Qing-Yu-1/notebook.git
