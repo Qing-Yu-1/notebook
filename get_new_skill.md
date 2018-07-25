@@ -49,5 +49,13 @@ apt-key add keyname   #把下载的key添加到本地trusted数据库中。
 apt-key del keyname   #从本地trusted数据库删除key。
 apt-key update        #更新本地trusted数据库，删除过期没用的key。
 ```
-
+`7.25`
+```
+df-h 
+```
+查看磁盘的剩余空间
+```
+sudo fdisk -l
+```
+查看整个硬盘的分区情况
 
