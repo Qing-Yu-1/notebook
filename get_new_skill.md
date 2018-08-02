@@ -59,6 +59,8 @@ sudo fdisk -l
 ```
 查看整个硬盘的分区情况<Br/>
 激活ros环境<Br/>
-~/catkin_ws2/devel/setup.sh<Br/>
+```
+~/catkin_ws2/devel/setup.sh
+```
 
 
