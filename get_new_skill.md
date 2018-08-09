@@ -62,5 +62,10 @@ sudo fdisk -l
 ```
 ~/catkin_ws2/devel/setup.sh
 ```
+新建空文件夹：<Br/>
+```
+touch a.txt
+>a.txt
+```
 
 
