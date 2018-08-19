@@ -8,6 +8,6 @@ animals = ['cat', 'dog', 'monkey']
 for idx, animal in enumerate(animals):
     print ('#%d: %s' % (idx + 1, animal))
 ```
-#1: cat
-#2: dog
-#3: monkey
+#1: cat<Br/>
+#2: dog<Br/>
+#3: monkey<Br/>
