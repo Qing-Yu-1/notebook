@@ -67,5 +67,9 @@ sudo fdisk -l
 touch a.txt
 >a.txt
 ```
+在anaconda３的machineLearning环境下查看pip的版本，可以使用pip install 安装python包
+```
+~/software/anaconda3/envs/machineLearning/lib/python3.6/site-packages$ pip -V
+```
 
 
