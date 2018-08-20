@@ -229,7 +229,7 @@ print (e)
  ```
 ### Array indexing
 Numpy offers several ways to index into arrays.<Br/>
-Slicing: Similar to Python lists, numpy arrays can be sliced. Since arrays may be multidimensional, you must specify a slice for each dimension of the array:<br/>
+Slicing: Similar to Python lists, numpy arrays can be sliced. Since arrays may be multidimensional, you must specify a slice for each dimension of the array:
 111
 
 
