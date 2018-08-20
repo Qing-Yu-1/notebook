@@ -2,6 +2,7 @@
 hw12 = '%s %s %d' % (hello, world, 12)  # sprintf style string formatting
 print (hw12)  # prints "hello world 12"
 ```
+#### list（列表）
 If you want access to the index of each element within the body of a loop, use the built-in `enumerate` function:
 ```
 animals = ['cat', 'dog', 'monkey']
@@ -11,6 +12,8 @@ for idx, animal in enumerate(animals):
 #1: cat<Br/>
 #2: dog<Br/>
 #3: monkey<Br/>
+
+#### Dictionaries（字典）
 It is easy to iterate over the keys in a dictionary:(迭代ｋｅｙ)
 ```
 d = {'person': 2, 'cat': 4, 'spider': 8}
@@ -31,5 +34,84 @@ for animal, legs in d.iteritems():
 A person has 2 legs<Br/>
 A spider has 8 legs<Br/>
 A cat has 4 legs<Br/>
+
+Dictionary comprehensions: These are similar to list comprehensions, but allow you to easily construct dictionaries. For example:
+```nums = [0, 1, 2, 3, 4]
+even_num_to_square = {x: x ** 2 for x in nums if x % 2 == 0}
+print (even_num_to_square)
+```
+{0: 0, 2: 4, 4: 16}
+
+#### Sets（集合）
+A set is an unordered collection of distinct elements. As a simple example, consider the following:
+```
+animals = {'cat', 'dog'}
+print ('cat' in animals)   # Check if an element is in a set; prints "True"
+print ('fish' in animals)  # prints "False"
+```
+True<Br/>
+False<Br/>
+
+```
+animals.add('fish')      # Add an element to a set
+print ('fish' in animals)
+print (len(animals))       # Number of elements in a set;
+```
+True<Br/>
+3<Br/>
+
+```
+animals.add('cat')       # Adding an element that is already in the set does nothing
+print len(animals)       
+animals.remove('cat')    # Remove an element from a set
+print len(animals)  
+```
+3<Br/>
+2<Br/>
+
+Set comprehensions: Like lists and dictionaries, we can easily construct sets using set comprehensions:
+```
+from math import sqrt
+print ({int(sqrt(x)) for x in range(30)})
+```
+{0, 1, 2, 3, 4, 5}<Br/>
+
+#### Tuples(元组）
+A tuple is an (immutable) ordered list of values. A tuple is in many ways similar to a list; one of the most important differences is that tuples can be used as keys in dictionaries and as elements of sets, while lists cannot. Here is a trivial example:
+```
+d = {(x, x + 1): x for x in range(10)}  # Create a dictionary with tuple keys
+t = (5, 6)       # Create a tuple
+print (type(t))
+print (d[t])       
+print (d[(1, 2)])
+```
+<class 'tuple'><Br/>
+5<Br/>
+1<Br/>
+```
+print(d)
+```
+```
+{(0, 1): 0, (1, 2): 1, (2, 3): 2, (3, 4): 3, (4, 5): 4, (5, 6): 5, (6, 7): 6, (7, 8): 7, (8, 9): 8, (9, 10): 9}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
