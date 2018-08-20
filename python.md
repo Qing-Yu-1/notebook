@@ -176,6 +176,7 @@ print a
 b = np.array([[1,2,3],[4,5,6]])   # Create a rank 2 array
 print (b)
 ```
+```
 [[1 2 3]
  [4 5 6]]
  ```
