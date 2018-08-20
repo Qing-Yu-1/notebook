@@ -196,6 +196,46 @@ print (a)
 [[ 0.  0.]
  [ 0.  0.]]
  ```
+```
+b = np.ones((1,2))   # Create an array of all ones
+print b
+```
+```
+[[1. 1.]]
+```
+```
+c = np.full((2,2), 7) # Create a constant array
+print c 
+```
+```
+[[ 7.  7.]
+ [ 7.  7.]]
+ ```
+```
+d = np.eye(2)        # Create a 2x2 identity matrix
+print d
+```
+```
+[[ 1.  0.]
+ [ 0.  1.]]
+ ```
+```
+e = np.random.random((2,2)) # Create an array filled with random values
+print (e)
+```
+```
+[[ 0.09477679  0.79267634]
+ [ 0.78291274  0.38962829]]
+ ```
+### Array indexing
+Numpy offers several ways to index into arrays.<Br/>
+Slicing: Similar to Python lists, numpy arrays can be sliced. Since arrays may be multidimensional, you must specify a slice for each dimension of the array:<br/>
+111
+
+
+
+
+
 
 
 
