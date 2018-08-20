@@ -71,5 +71,8 @@ touch a.txt
 ```
 ~/software/anaconda3/envs/machineLearning/lib/python3.6/site-packages$ pip -V
 ```
-
+安装一个 Debian 软件包，如你手动下载的文件。
+```
+sudo dpkg -i <package.deb>
+```
 
