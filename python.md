@@ -11,3 +11,25 @@ for idx, animal in enumerate(animals):
 #1: cat<Br/>
 #2: dog<Br/>
 #3: monkey<Br/>
+It is easy to iterate over the keys in a dictionary:(迭代ｋｅｙ)
+```
+d = {'person': 2, 'cat': 4, 'spider': 8}
+for animal in d:
+    legs = d[animal]
+    print ('A %s has %d legs' % (animal, legs))
+```
+A person has 2 legs<Br/>
+A cat has 4 legs<Br/>
+A spider has 8 legs<Br/>
+
+If you want access to keys and their corresponding values, use the iteritems method:<Br/>
+```
+d = {'person': 2, 'cat': 4, 'spider': 8}
+for animal, legs in d.iteritems():
+    print 'A %s has %d legs' % (animal, legs)
+```
+A person has 2 legs<Br/>
+A spider has 8 legs<Br/>
+A cat has 4 legs<Br/>
+
+
