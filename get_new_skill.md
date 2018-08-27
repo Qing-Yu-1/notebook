@@ -75,4 +75,7 @@ touch a.txt
 ```
 sudo dpkg -i <package.deb>
 ```
+打开网易云音乐
+sudo -S netease-cloud-music
+
 
