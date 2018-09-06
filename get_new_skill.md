@@ -79,18 +79,43 @@ sudo dpkg -i <package.deb>
 ```
 sudo -S netease-cloud-music
 ```
-删除软件
+### 删除软件
 
 方法一、如果你知道要删除软件的具体名称，可以使用<br/>
 ```
 sudo apt-get remove --purge 软件名称  
 sudo apt-get autoremove --purge 软件名称 
 ```
-在ubuntu下basket note pads则可以媲美onenote<br/>
+### 在ubuntu下basket note pads则可以媲美onenote<br/>
 安装方法:<br/>
 ```
 sudo apt-get install basket
 ```
+### xz压缩文件方法或命令
+要压缩的文件<br/>
+```
+xz -z 
+```
+如果要保留被压缩的文件加上参数 -k ，如果要设置压缩率加入参数 -0 到 -9调节压缩率。如果不设置，默认压缩等级是6.<br/>
+xz解压文件方法或命令<br/>
+```
+xz -d #要解压的文件
+```
+创建tar.xz文件：只要先 `tar cvf xxx.tar xxx/` 这样创建xxx.tar文件先，然后使用 `xz -z xxx.tar` 来将 xxx.tar压缩成为 xxx.tar.xz<br/>
+解压tar.xz文件：先 `xz -d xxx.tar.xz` 将 xxx.tar.xz解压成 xxx.tar 然后，再用 `tar xvf xxx.tar`来解包。<br/>
+### tar.gz安装与卸载
+tar.gz源代码包安装方式：
+1、找到相应的软件包，比如soft.tar.gz，下载到本机某个目录；<br/>
+2、打开一个终端，使用命令：su –转换成root用户；<br/>
+3、`cd soft.tar.gz`所在的目录；<br/>
+4、`tar -xzvf soft.tar.gz` //一般会生成一个soft目录<br/>
+5、`cd soft`<br/>
+6、`./configure --prefix=/usr/local/soft`(指定安装目录)<br/>
+7、`make`<br/>
+8、`make install`<br/>
+卸载：用cd 命令进入编译后的软件目录，即安装时的目录<br/>
+执行反安装命令：make uninstall或 手动删除<br/>
+
 
 
 
