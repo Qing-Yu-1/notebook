@@ -1,3 +1,4 @@
+### np.random.choice的用法
 ```
 import numpy as np
 
