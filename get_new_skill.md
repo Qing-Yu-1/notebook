@@ -76,6 +76,15 @@ touch a.txt
 sudo dpkg -i <package.deb>
 ```
 打开网易云音乐
+```
 sudo -S netease-cloud-music
+```
+删除软件
+
+方法一、如果你知道要删除软件的具体名称，可以使用<br/>
+```
+sudo apt-get remove --purge 软件名称  
+sudo apt-get autoremove --purge 软件名称 
+```
 
 
