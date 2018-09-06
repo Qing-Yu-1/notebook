@@ -86,5 +86,12 @@ sudo -S netease-cloud-music
 sudo apt-get remove --purge 软件名称  
 sudo apt-get autoremove --purge 软件名称 
 ```
+在ubuntu下basket note pads则可以媲美onenote<br/>
+安装方法:<br/>
+```
+sudo apt-get install basket
+```
+
+
 
 
