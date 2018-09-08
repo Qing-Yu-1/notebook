@@ -118,7 +118,7 @@ tar.gz源代码包安装方式：
 ### A Primer on Using LaTeX in Jupyter Notebooks
 http://data-blog.udacity.com/posts/2016/10/latex-primer/
 
-
+$$P(A\mid B) = \frac{P(B\mid A)P(A)}{P(B)}$$
 
 
 
