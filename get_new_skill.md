@@ -115,6 +115,8 @@ tar.gz源代码包安装方式：
 8、`make install`<br/>
 卸载：用cd 命令进入编译后的软件目录，即安装时的目录<br/>
 执行反安装命令：make uninstall或 手动删除<br/>
+### A Primer on Using LaTeX in Jupyter Notebooks
+http://data-blog.udacity.com/posts/2016/10/latex-primer/
 
 
 
