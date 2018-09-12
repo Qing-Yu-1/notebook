@@ -142,6 +142,8 @@ a^2
 ｀｀｀math
 ｀｀｀
 ```
+MathJax: LaTeX<br/>
+https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 
 
 
