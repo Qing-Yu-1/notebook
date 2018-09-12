@@ -118,6 +118,14 @@ tar.gz源代码包安装方式：
 ### A Primer on Using LaTeX in Jupyter Notebooks
 http://data-blog.udacity.com/posts/2016/10/latex-primer/
 
+### 有道云笔记网页版插入图片
+１．建议一个专门存放图片的文件夹<br/>
+２．在这个文件夹中建立一个普通笔记，将图片上传（直接粘贴）到这个页面<br/>
+３．分享这个页面，查看分享，在弹出的新页面中找到对应的图片，直接右键，选择复制该图片的地址<br/>
+４．在markdown的界面中输入｀![](图片地址）｀就ＯＫ了<br/>
+5.如果不差钱，可以开通会员，直接上传
+
+
 
 
 
