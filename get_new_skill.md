@@ -146,6 +146,8 @@ MathJax: LaTeX<br/>
 https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 ### 护眼软件　redshift redshif-gtk
 https://github.com/jonls/redshift
+### 闹钟
+打开 Ubuntu 终端，我们要安装的就是那个 `alarm-clock-applet`
 
 
 
