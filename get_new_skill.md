@@ -155,6 +155,7 @@ https://github.com/XndroidDev/Xndroid
 dpkg -L 软件名
 ```
 ### 动态链接库的配置问题
+相关链接：https://blog.csdn.net/farmwang/article/details/72877810
 编辑文件，把库的路径添加到ld.so.conf文件中
 ```
 sudo vim /etc/ld.so.conf
@@ -241,7 +242,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DIR/lib
 make
 make install
 ```
-export LD_LIBRARY_PATH 的使用
+https://blog.csdn.net/m0_37170593/article/details/78892913(关于第三行的解释`./configure ...`）<br/>
+`eport LD_LIBRARY_PATH`的使用<br/>
+`LD_LIBRARY_PATH`Linux环境变量名，该环境变量主要用于指定查找共享库（动态链接库）时除了默认路径之外的其他路径。<br/>
 https://www.cnblogs.com/wainiwann/p/4210343.html
 '.zshrc'需要添加：
 ```
