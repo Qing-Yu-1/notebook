@@ -150,8 +150,104 @@ https://github.com/jonls/redshift
 打开 Ubuntu 终端，我们要安装的就是那个 `alarm-clock-applet`
 ### 手机翻墙软件
 https://github.com/XndroidDev/Xndroid
+查看已安装软件的位置和信息
+```
+dpkg -L 软件名
+```
+### 动态链接库的配置问题
+编辑文件，把库的路径添加到ld.so.conf文件中
+```
+sudo vim /etc/ld.so.conf
+```
+配置完成后，执行一下命令，是文件立即生效
+```
+$ sudo ldconfig
+```
+### Linux下环境变量配置方法梳理（.bash_profile和.bashrc的区别）
+`~/.bash_profile`: 每个用户都可使用该文件输入专用于自己使用的shell信息,当用户登录时,该文件仅仅执行一次!默认情况下,他设置一些环境变量,执行用户的.bashrc文件(??).<br/>
+`~/.bashrc`: 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该该文件被读取.<br/>
+`/etc/profile`: 此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行.并从/etc/profile.d目录的配置文件中搜集shell的设置.<br/>
+`~/.bashrc`: 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该该文件被读取.<br/>
+`~/.bash_logout`: 当每次退出系统(退出bash shell)时,执行该文件.<br/>
+另外,`/etc/profile`中设定的变量(全局)的可以作用于任何用户,而`~/.bashrc`等中设定的变量(局部)只能继承`/etc/profile`中的变量,他们是"父子"关系.<br/>
+```
+KETTLE_HOME=/path/to/dir
+export KETTLE_HOME
+```
+注意：配置好环境变量后，要记得export输出这个变量，否则如下source后无效！
+[app@test ~]$ source .bashrc //使之生效
+### 安装tmux
+tmux（github)
+https://github.com/tmux/tmux
 
+linux 下安装软件tar.gz, rpm,deb的方法:
+http://blog.chinaunix.net/uid-23781137-id-3455554.html
+```
+第一部分：搞定.tar.gz
 
+　　1.首先，使用tar -xzvf来解开这个包，如：
+　　#tar -xzvf apache_1_3_6_tar.gz
+　　这样就会在当前目录中创建了一个新目录(目录名与.tat.gz包的文件名类似），用来存放解压了的内容。如本例中就是apache_1.3.6
 
+　　2.进入这个目录，再用ls命令查看一下所包含的文件，如：
+　　#拟定cd apache_1.3.6
+　　#ls
+　　你观察一下这个目录中包含了以下哪一个文件：configure、Makefile还是Imake。
+1）如果是configure文件,就执行：
+　　#./configure 
+　　#make
+　　#make install
+2）如果是Makefile文件,就执行：
+　　#make
+　　#make install
+3）如果是Imake文件,就执行：
+　　#xmkmf
+　　#make
+　　#make install
+```
+https://www.jianshu.com/p/cece3a18723d(遇到的问题）
+安装两个依赖包
+```
+tmux depends on libevent 2.x. Download it from:
+
+	http://libevent.org
+
+It also depends on ncurses, available from:
+
+	http://invisible-island.net/ncurses/
+
+To build and install tmux from a release tarball, use:
+
+	$ ./configure && make
+	$ sudo make install
+```
+```
+tmux can use the utempter library to update utmp(5), if it is installed - run
+configure with --enable-utempter to enable this.
+
+To get and build the latest from version control:
+
+	$ git clone https://github.com/tmux/tmux.git
+	$ cd tmux
+	$ sh autogen.sh
+	$ ./configure && make
+```
+Tmux: Error While Loading Shared Libraries: libevent-2.0.so.6（遇到的错误）
+
+```
+export DIR="$HOME/local"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DIR/lib
+./configure --prefix=$DIR CFLAGS="-I$DIR/include" LDFLAGS="-L$DIR/lib"
+make
+make install
+```
+export LD_LIBRARY_PATH 的使用
+https://www.cnblogs.com/wainiwann/p/4210343.html
+'.zshrc'需要添加：
+```
+export DIR="$HOME/local"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DIR/lib
+```
+以便每次运行zsh时，就把LD_LIBRARY_PATH的路径添加到当前shell中。
 
 
