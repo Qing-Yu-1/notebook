@@ -150,10 +150,15 @@ https://github.com/jonls/redshift
 打开 Ubuntu 终端，我们要安装的就是那个 `alarm-clock-applet`
 ### 手机翻墙软件
 https://github.com/XndroidDev/Xndroid
-查看已安装软件的位置和信息
+### 查看已安装软件的位置和信息（通过apt-get的方式）
+apt-get install安装目录是包的维护者确定的，不是用户
 ```
 dpkg -L 软件名
 ```
+### 删除没用的deb包
+`/var/cache/apt/archives`是apt-get方式下载的deb包
+可以通过`sudo apt-get clean`删除deb包
+
 ### 动态链接库的配置问题
 相关链接：https://blog.csdn.net/farmwang/article/details/72877810
 编辑文件，把库的路径添加到ld.so.conf文件中
@@ -252,5 +257,14 @@ export DIR="$HOME/local"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DIR/lib
 ```
 以便每次运行zsh时，就把LD_LIBRARY_PATH的路径添加到当前shell中。
+### 查看当前shell的值
+单独查看PATH环境变量
+```
+echo $PATH
+```
+可用 `export` 命令查看PATH值
+### 使用which
+which命令的原理：在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。
+
 
 
