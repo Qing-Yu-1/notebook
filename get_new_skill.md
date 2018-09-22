@@ -266,6 +266,7 @@ echo $PATH
 ### 使用which
 which命令的原理：在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。
 ### tmux内的复制和粘贴
+http://jasonwryan.com/blog/2011/06/07/copy-and-paste-in-tmux/
 ```
 Ctrlt+a,Escape   # enter copy mode
 # move cursor to the start or end of the desired text string
@@ -290,6 +291,63 @@ TMUX= tmux new-session -d -s name
 tmux switch-client -t name
 The TMUX= on the first line is required so tmux doesn't throw a sessions should be nested with care, unset $TMUX to force message.
 ```
+### tmux2.8与系统粘贴板互通
+参考：https://unix.stackexchange.com/questions/131011/use-system-clipboard-in-vi-copy-mode-in-tmux<br/>
+https://blog.csdn.net/anribras/article/details/53965718<br/>
+```
+setw -g mode-keys         vi    # 进入复制模式的时候使用 vi 键位（默认是 EMACS）
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -Tcopy-mode-vi v send -X begin-selection
+#bind -Tcopy-mode-vi y send -X copy-selection
+
+bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xclip -i -f -selection primary | xclip -i -selection clipboard"
+```
+`c+a,escape`先进入可视模式,`v`选择文本，`y`将文本通过`xclip`输入到系统粘贴板
+### tmux2.1与系统粘贴板互通
+```
+bind-key -t vi-copy y copy-pipe 'xclip -selection clipboard >/dev/null'
+```
+参考：https://unix.stackexchange.com/questions/131011/use-system-clipboard-in-vi-copy-mode-in-tmux<br/>
+https://blog.csdn.net/anribras/article/details/53965718<br/>
+整个配置文件如下：<br/>
+```
+#send prefix
+set-option -g prefix C-b
+#unbind-key C-b
+bind-key C-b send-prefix
+
+# Use Alt-arrow keys to switch panes
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Shift arrow to switch windows
+bind -n S-Left previous-window
+bind -n S-Right next-window
+
+# Mouse mode
+set -g mouse on
+# Set easier window split keys
+bind-key v split-window -h
+bind-key h split-window -v
+
+#vi
+setw -g mode-keys vi
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy y copy-pipe 'xclip -selection clipboard >/dev/null'
+# Easy config reload
+bind-key r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
+```
+
+
 
 
 
