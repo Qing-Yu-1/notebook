@@ -283,6 +283,14 @@ Ctrlt+a,p       # put/paste the text in the desired location
 `" + y`
 从系统粘贴板中提取文字到vim中：<br/>
 `" + p`
+### tmux problem
+Using this works for me:
+```
+TMUX= tmux new-session -d -s name
+tmux switch-client -t name
+The TMUX= on the first line is required so tmux doesn't throw a sessions should be nested with care, unset $TMUX to force message.
+```
+
 
 
 
