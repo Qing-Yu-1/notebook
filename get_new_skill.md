@@ -353,7 +353,8 @@ You can try this command over SSH:
 If you want to just send this command over SSH and authenticate in one go, append the command to the regular SSH command:
 
 `ssh -t <options> <user>@<hostname> sudo poweroff`
-### ssh remote
+### ssh remote login
+https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu#conclusion
 `ssh remote_username@remote_host`
 `ssh jucic@218.197.199.222`
 
