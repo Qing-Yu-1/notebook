@@ -357,8 +357,8 @@ If you want to just send this command over SSH and authenticate in one go, appen
 https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu#conclusion
 `ssh remote_username@remote_host`
 `ssh jucic@218.197.199.222`
-
-
+### tmux查看版本号
+` tmux -V`
 
 
 
