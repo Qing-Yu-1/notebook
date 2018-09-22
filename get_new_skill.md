@@ -346,7 +346,13 @@ bind-key -t vi-copy y copy-pipe 'xclip -selection clipboard >/dev/null'
 # Easy config reload
 bind-key r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
 ```
+### shutdown over ssh
+You can try this command over SSH:
 
+`sudo poweroff`
+If you want to just send this command over SSH and authenticate in one go, append the command to the regular SSH command:
+
+`ssh -t <options> <user>@<hostname> sudo poweroff`
 
 
 
