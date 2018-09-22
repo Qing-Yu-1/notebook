@@ -275,6 +275,15 @@ y                        # to capture the string
 q                        # exit copy mode
 Ctrlt+a,p       # put/paste the text in the desired location
 ```
+### vim 与系统粘贴板互通
+在命令行下输入命令：`vim --version | grep clipboard `
+看一下输出结果中clipboard前面是+还是-，如果是+，这就意味着vim是可以与系统共享剪切板的<br/>
+进入可视模式，`v`,选择需要选中的文字
+在vim中，将文字放入系统粘贴板：<br/>
+`" + y`
+从系统粘贴板中提取文字到vim中：<br/>
+`" + p`
+
 
 
 
