@@ -265,6 +265,17 @@ echo $PATH
 可用 `export` 命令查看PATH值
 ### 使用which
 which命令的原理：在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。
+### tmux内的复制和粘贴
+```
+Ctrlt+a,Escape   # enter copy mode
+# move cursor to the start or end of the desired text string
+v                        # to activate highlighting
+# move cursor to cover the requisite string
+y                        # to capture the string
+q                        # exit copy mode
+Ctrlt+a,p       # put/paste the text in the desired location
+```
+
 
 
 
