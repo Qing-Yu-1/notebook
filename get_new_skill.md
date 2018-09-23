@@ -361,6 +361,8 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 ` tmux -V`
 ### 查看nvidia GPU的信息
 `nvidia-smi`
+### change the default shell
+`chsh -s $(which zsh)`
 
 
 
