@@ -378,7 +378,8 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 ```
 ssh -L8008:localhost:8888 qy@218.197.199.222
 ```
-
+### Ubuntu 镜像使用帮助
+https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 
 
 
