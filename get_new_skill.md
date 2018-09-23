@@ -365,7 +365,7 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 ### change the default shell
 `chsh -s $(which zsh)`
 ### anaconda3 path of server
-`export PATH=/home/qy/software/anaconda3/bin:$PATH`
+`export PATH=/home/qy/software/anaconda3/bin:$PATH`<br/>
 `source activate gluon`
 
 ### 删除
