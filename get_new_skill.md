@@ -366,6 +366,8 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 `chsh -s $(which zsh)`
 ### anaconda3 path of server
 `export PATH=/home/qy/software/anaconda3/bin:$PATH`
+`source activate gluon`
+
 ### 删除
 ```
 # vim /etc/apt/sources.list
