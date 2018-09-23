@@ -359,6 +359,9 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 `ssh jucic@218.197.199.222`
 ### tmux查看版本号
 ` tmux -V`
+### 查看nvidia GPU的信息
+`nvidia-smi`
+
 
 
 
