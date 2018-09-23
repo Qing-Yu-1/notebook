@@ -373,6 +373,11 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 即删除从第一行到当前行，清空文件内容，然后 :wq 保存
 "."当前行 ，"1,."表示从第一行到当前行 ，"d"删除
 ```
+### 登入server 端口映射
+```
+ssh -L8008:localhost:8888 qy@218.197.199.222
+```
+
 
 
 
