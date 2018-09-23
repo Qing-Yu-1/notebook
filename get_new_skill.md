@@ -380,6 +380,8 @@ ssh -L8008:localhost:8888 qy@218.197.199.222
 ```
 ### Ubuntu 镜像使用帮助
 https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
+### 清华大学开源软件镜像站
+https://mirrors.tuna.tsinghua.edu.cn/
 
 
 
