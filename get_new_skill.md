@@ -382,7 +382,11 @@ ssh -L8008:localhost:8888 qy@218.197.199.222
 https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
 ### 清华大学开源软件镜像站
 https://mirrors.tuna.tsinghua.edu.cn/
-
+### logout ssh
+```
+法1：Ctrl+D
+法2：输入 logout
+```
 
 
 
