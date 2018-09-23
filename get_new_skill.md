@@ -365,7 +365,14 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 `chsh -s $(which zsh)`
 ### anaconda3 path of server
 `export PATH=/home/qy/software/anaconda3/bin:$PATH`
-
+### 删除
+```
+# vim /etc/apt/sources.list
+可以先将光标滚动到文件末尾使用命令
+:1,.d
+即删除从第一行到当前行，清空文件内容，然后 :wq 保存
+"."当前行 ，"1,."表示从第一行到当前行 ，"d"删除
+```
 
 
 
