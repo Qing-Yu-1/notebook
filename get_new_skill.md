@@ -363,6 +363,9 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 `nvidia-smi`
 ### change the default shell
 `chsh -s $(which zsh)`
+### anaconda3 path of server
+`export PATH=/home/qy/software/anaconda3/bin:$PATH`
+
 
 
 
