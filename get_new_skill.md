@@ -355,8 +355,9 @@ If you want to just send this command over SSH and authenticate in one go, appen
 `ssh -t <options> <user>@<hostname> sudo poweroff`
 ### ssh remote login
 https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu#conclusion
-`ssh remote_username@remote_host`
-`ssh jucic@218.197.199.222`
+`ssh remote_username@remote_host`<br/>
+`ssh jucic@218.197.199.222`<br/>
+`ssh qy@218.197.199.222`<br/>
 ### tmux查看版本号
 ` tmux -V`
 ### 查看nvidia GPU的信息
