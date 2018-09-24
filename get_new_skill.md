@@ -390,6 +390,41 @@ https://mirrors.tuna.tsinghua.edu.cn/
 法1：Ctrl+D
 法2：输入 logout
 ```
+### 终端打开文件管理器
+```
+在linux下开发时，使用最多的是终端，在某些情况下，想通过终端快速打开图形化的文件管理器，来管理当前目录，我们可以使用如下命令：
+#nautilus . 
+顺便说一下，在windos下使用 explorer .  
+在mac os下使用 open  
+```
+### 前后台进程切换
+https://blog.csdn.net/qq_36275734/article/details/82830669
+`fg、bg、jobs、&、ctrl + z命令`
+## screen 窗口管理器常用操作
+https://blog.csdn.net/qq_36275734/article/details/82832722
+https://www.tecmint.com/screen-commahaond-examples-to-manage-linux-terminals/
+建立不同的会话：每建一个，然后detach ,然后再建，reattach(重新链接）输入会话的id比较好
+```
+创建会话：c+a -S [screen-name] 
+-m 　即使目前已在会话中的screen会话，仍强制建立新的screen会话
+查看所有会话：screen –ls
+Reattach 会话：screen –r [screen-name]
+Detach 会话: screen –d [screen name（id)]
+ctrl + a + d：detach当前会话
+ctrl + a + c：创建新窗口（create）
+ctrl + a + w: 列出所有窗口
+ctrl + a + A: 窗口重命名
+ctrl + d：退出（关闭）当前窗口
+```
+### tmux ssh 远程连接时访问本地系统粘贴板的方法
+
+https://medium.freecodecamp.org/tmux-in-practice-integration-with-system-clipboard-bcd72c62ff7b
+
+https://hackernoon.com/tmux-in-practice-copy-text-from-remhttps://blog.csdn.net/YuZhiHui_No1/article/details/44564963ote-session-using-ssh-remote-tunnel-and-systemd-service-dd3c51bca1fa
+
+
+
+
 
 
 
