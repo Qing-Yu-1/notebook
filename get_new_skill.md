@@ -424,10 +424,11 @@ https://medium.freecodecamp.org/tmux-in-practice-integration-with-system-clipboa
 
 https://hackernoon.com/tmux-in-practice-copy-text-from-remhttps://blog.csdn.net/YuZhiHui_No1/article/details/44564963ote-session-using-ssh-remote-tunnel-and-systemd-service-dd3c51bca1fa<br/>
 其他的方法：
-关闭Mouse mode，就OK
-#set -g mouse on
-在命令终端，可以进行复制粘贴操作，有多个窗口时可以快捷键，`c+b+z`进行最大化，然后复制粘贴
-编辑文件时，可以打开gedit图形界面，可以按`c+c``c+v`进行复制粘贴操作（比较慢）
+在.tmux.conf中关闭Mouse mode，就OK<br/>
+#set -g mouse on<br/>
+在命令终端，可以进行复制粘贴操作，有多个窗口时可以快捷键，`c+b+z`进行最大化，然后复制粘贴<br/>
+编辑文件时，可以打开gedit图形界面，可以按`c+c``c+v`进行复制粘贴操作（比较慢)<br/>
+
 
 
 
