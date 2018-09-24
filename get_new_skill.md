@@ -427,7 +427,7 @@ https://hackernoon.com/tmux-in-practice-copy-text-from-remhttps://blog.csdn.net/
 在.tmux.conf中关闭Mouse mode，就OK<br/>
 #set -g mouse on<br/>
 在命令终端，可以进行复制粘贴操作，有多个窗口时可以快捷键，`c+b+z`进行最大化，然后复制粘贴<br/>
-编辑文件时，可以打开gedit图形界面，可以按`c+c``c+v`进行复制粘贴操作（比较慢)<br/>
+编辑文件时，在vim中，也可以打开gedit图形界面（比较慢)，可以按`c+c``c+v`进行复制粘贴操作<br/>
 
 
 
