@@ -347,6 +347,7 @@ bind-key -t vi-copy y copy-pipe 'xclip -selection clipboard >/dev/null'
 bind-key r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
 ```
 ### shutdown over ssh
+这是关机命令，在服务器上不要用，用`who`可以查看系统中用户的登录情况
 You can try this command over SSH:
 
 `sudo poweroff`
@@ -358,6 +359,7 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 `ssh remote_username@remote_host`<br/>
 `ssh jucic@218.197.199.222`<br/>
 `ssh qy@218.197.199.222`<br/>
+可以使用图形：`ssh qy@218.197.199.222 -X`
 ### tmux查看版本号
 ` tmux -V`
 ### 查看nvidia GPU的信息
