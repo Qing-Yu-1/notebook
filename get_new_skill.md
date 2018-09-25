@@ -362,6 +362,44 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 可以使用图形：`ssh qy@218.197.199.222 -X`
 ### tmux查看版本号
 ` tmux -V`
+### tmux常用命令
+https://gist.github.com/ryerh/14b7c24dfd623ef8edc7
+启动新会话：
+`tmux [new -s 会话名 -n 窗口名]`
+Detach 会话:
+`prefix+d`
+恢复会话：
+`tmux a [-t 会话名]`
+列出所有会话：
+`tmux ls`
+#### tmux会话
+```
+:new<回车>  启动新会话
+s           列出所有会话
+$           重命名当前会话
+```
+#### tmux调整窗口排序
+```
+swap-window -s 3 -t 1  交换 3 号和 1 号窗口
+swap-window -t 1       交换当前和 1 号窗口
+move-window -t 1       移动当前窗口到 1 号
+```
+#### 窗格（分割窗口）
+```
+%  垂直分割
+"  水平分割
+o  交换窗格
+x  关闭窗格
+⍽  左边这个符号代表空格键 - 切换布局
+q 显示每个窗格是第几个，当数字出现的时候按数字几就选中第几个窗格
+{ 与上一个窗格交换位置
+} 与下一个窗格交换位置
+z 切换窗格最大化/最小化
+```
+### conky 在桌面显示系统的cpu 内存等信息
+http://blog.sina.com.cn/s/blog_69e5d8400102vr0x.html
+http://www.junauza.com/2009/03/installset-up-conky-on-ubuntu.html
+
 ### 查看nvidia GPU的信息
 `nvidia-smi`
 ### change the default shell
