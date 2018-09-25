@@ -404,6 +404,10 @@ http://www.junauza.com/2009/03/installset-up-conky-on-ubuntu.html
 
 ### 查看nvidia GPU的信息
 `nvidia-smi`
+### cuda 的版本
+```
+cat /usr/local/cuda/version.txt
+```
 ### change the default shell
 `chsh -s $(which zsh)`
 ### anaconda3 path of server
@@ -469,10 +473,6 @@ https://hackernoon.com/tmux-in-practice-copy-text-from-remhttps://blog.csdn.net/
 在命令终端，可以进行复制粘贴操作，有多个窗口时可以快捷键，`c+b+z`进行最大化，然后复制粘贴<br/>
 编辑文件时，在vim中，也可以打开gedit图形界面（比较慢)，可以按`c+c``c+v`进行复制粘贴操作<br/>
 
-
-
-
-
 ### packages in environment at /home/qy/anaconda3:
 ` conda list --show-channel-urls`
 ### 列出anaconda中环境的路径
@@ -488,4 +488,5 @@ source activate [name]
 退出环境
 source deactivate
 ```
-
+### 如何更改linux文件的拥有者及用户组(chown和chgrp)
+https://blog.csdn.net/hudashi/article/details/7797393
