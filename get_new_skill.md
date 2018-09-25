@@ -473,6 +473,12 @@ https://hackernoon.com/tmux-in-practice-copy-text-from-remhttps://blog.csdn.net/
 
 
 
-
-
+### packages in environment at /home/qy/anaconda3:
+` conda list --show-channel-urls`
+### 列出anaconda中环境的路径
+`conda info -e`
+### 删除anaconda 的环境
+```
+conda remove -n [name] --all
+```
 
