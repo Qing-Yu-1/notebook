@@ -492,10 +492,19 @@ source deactivate
 https://blog.csdn.net/hudashi/article/details/7797393
 
 ### ananconda 安装nb_conda，解决jupyter notebook中环境的选择
+https://my.oschina.net/flyrobin/blog/1546363
 qy@BMEserver [08:42:05 AM] [~/anaconda3/bin] 
 -> % ./conda install nb_conda
 好像conda和pip是差不多的。
-
+### cuda ImportError: libcublas.so.9.0: cannot open shared object file
+https://blog.csdn.net/ksws0292756/article/details/80034086
+### conda 前面不能用sudo ,可以直接找到conda命令的路径
+在安装anaconda的时候，不要用sudo,否者安装的文件都是root的文件
+```
+sudo: conda: command not found
+可以使用：
+sudo path/to/conda install xxx
+```
 
 
 
