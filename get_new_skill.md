@@ -366,13 +366,13 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 https://gist.github.com/ryerh/14b7c24dfd623ef8edc7
 ```
 启动新会话：
-`tmux [new -s 会话名 -n 窗口名]`
+tmux [new -s 会话名 -n 窗口名]
 Detach 会话:
-`prefix+d`
+prefix+d
 恢复会话：
-`tmux a [-t 会话名]`
+tmux a [-t 会话名]
 列出所有会话：
-`tmux ls`
+tmux ls
 ```
 #### tmux会话
 ```
