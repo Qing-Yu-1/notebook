@@ -490,3 +490,12 @@ source deactivate
 ```
 ### 如何更改linux文件的拥有者及用户组(chown和chgrp)
 https://blog.csdn.net/hudashi/article/details/7797393
+
+### ananconda 安装nb_conda，解决jupyter notebook中环境的选择
+qy@BMEserver [08:42:05 AM] [~/anaconda3/bin] 
+-> % ./conda install nb_conda
+好像conda和pip是差不多的。
+
+
+
+
