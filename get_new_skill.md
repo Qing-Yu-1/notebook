@@ -421,7 +421,7 @@ http://www.junauza.com/2009/03/installset-up-conky-on-ubuntu.html
 ```
 ### 登入server 端口映射
 ```
-ssh -L8008:localhost:8888 qy@218.197.199.222
+ssh -L8008:localhost:8888 qy@218.197.199.222 -X
 ```
 ### Ubuntu 镜像使用帮助
 https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
