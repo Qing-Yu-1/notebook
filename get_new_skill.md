@@ -477,8 +477,15 @@ https://hackernoon.com/tmux-in-practice-copy-text-from-remhttps://blog.csdn.net/
 ` conda list --show-channel-urls`
 ### 列出anaconda中环境的路径
 `conda info -e`
-### 删除anaconda 的环境
+### anaconda创建环境、删除环境、激活环境、退出环境
 ```
+Anaconda创建环境：
+conda create -n [name] python=3.6 
+删除环境（不要乱删啊啊啊）
 conda remove -n [name] --all
+激活环境
+source activate [name]
+退出环境
+source deactivate
 ```
 
