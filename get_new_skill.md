@@ -505,8 +505,11 @@ sudo: conda: command not found
 可以使用：
 sudo path/to/conda install xxx
 ```
-### 插入网络图片和超链接
+### 插入超链接和网络图片
 ```
+[要显示的文字](链接的地址)
+[百度](https://www.baidu.com/)
+
 叹号! + 方括号[ ] + 括号( )
 在方括号里可以加入一些 标识性的信息
 ![](http://upload-images.jianshu.io/upload_images/1483901-4fc7e179642197ff.gif?imageMogr2/auto-orient/strip)
