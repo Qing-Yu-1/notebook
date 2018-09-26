@@ -505,7 +505,7 @@ sudo: conda: command not found
 可以使用：
 sudo path/to/conda install xxx
 ```
-### 插入超链接和网络图片
+### github markdown(简书等）插入超链接和网络图片
 ```
 [要显示的文字](链接的地址)
 [百度](https://www.baidu.com/)
