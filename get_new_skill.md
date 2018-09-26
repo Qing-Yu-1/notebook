@@ -517,6 +517,14 @@ sudo path/to/conda install xxx
 [百度](https://www.baidu.com/)<br/>
 ![百度](http://upload-images.jianshu.io/upload_images/1483901-4fc7e179642197ff.gif?imageMogr2/auto-orient/strip)<br/>
 
-
+### Linux下监视NVIDIA的GPU使用情况
+https://blog.csdn.net/jasonzzj/article/details/52649174
+```
+$ nvidia-smi
+```
+```
+监视显存：我们设置为每 1s 显示一次显存的情况：
+$ watch -n 1 nvidia-smi
+```
 
 
