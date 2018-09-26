@@ -505,7 +505,7 @@ sudo: conda: command not found
 可以使用：
 sudo path/to/conda install xxx
 ```
-### github markdown(简书等）插入超链接和网络图片
+### github markdown(简书等）插入超链接和网络图片--github--markdown--
 ```
 [要显示的文字](链接的地址)
 [百度](https://www.baidu.com/)
@@ -517,7 +517,7 @@ sudo path/to/conda install xxx
 [百度](https://www.baidu.com/)<br/>
 ![百度](http://upload-images.jianshu.io/upload_images/1483901-4fc7e179642197ff.gif?imageMogr2/auto-orient/strip)<br/>
 
-### Linux下监视NVIDIA的GPU使用情况
+### Linux下监视NVIDIA的GPU使用情况--nvid--
 https://blog.csdn.net/jasonzzj/article/details/52649174
 ```
 $ nvidia-smi
@@ -526,5 +526,7 @@ $ nvidia-smi
 监视显存：我们设置为每 1s 显示一次显存的情况：
 $ watch -n 1 nvidia-smi
 ```
+### vim替换--vim--
+例如`:%s/foo/bar/g`会在全局范围(%)查找`foo`并替换为`bar`，所有出现都会被替换（g）。
 
 
