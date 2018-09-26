@@ -505,6 +505,7 @@ sudo: conda: command not found
 可以使用：
 sudo path/to/conda install xxx
 ```
+![](http://upload-images.jianshu.io/upload_images/1483901-4fc7e179642197ff.gif?imageMogr2/auto-orient/strip)
 
 
 
