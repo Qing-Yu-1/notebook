@@ -527,6 +527,7 @@ $ nvidia-smi
 $ watch -n 1 nvidia-smi
 ```
 ### vim替换--vim--
+https://harttle.land/2016/08/08/vim-search-in-file.html
 例如`:%s/foo/bar/g`会在全局范围(%)查找`foo`并替换为`bar`，所有出现都会被替换（g）。
 
 
