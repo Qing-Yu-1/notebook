@@ -511,8 +511,8 @@ sudo path/to/conda install xxx
 在方括号里可以加入一些 标识性的信息
 ![](http://upload-images.jianshu.io/upload_images/1483901-4fc7e179642197ff.gif?imageMogr2/auto-orient/strip)
 ```
-[百度](https://www.baidu.com/)
-![百度](http://upload-images.jianshu.io/upload_images/1483901-4fc7e179642197ff.gif?imageMogr2/auto-orient/strip)
+[百度](https://www.baidu.com/)<br/>
+![百度](http://upload-images.jianshu.io/upload_images/1483901-4fc7e179642197ff.gif?imageMogr2/auto-orient/strip)<br/>
 
 
 
