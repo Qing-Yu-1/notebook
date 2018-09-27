@@ -35,6 +35,7 @@ git checkout – 文件名　链接：https://blog.csdn.net/qq_28602957/article/
 ```
 git remote -v
 ```
+用户名更改：Qing-Yu-1 -> qyzhizi
 
 echo "# notebook" >> README.md
 git init
