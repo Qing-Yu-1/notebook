@@ -1,10 +1,10 @@
-```
+```python
 hw12 = '%s %s %d' % (hello, world, 12)  # sprintf style string formatting
 print (hw12)  # prints "hello world 12"
 ```
 #### list（列表）
 If you want access to the index of each element within the body of a loop, use the built-in `enumerate` function:
-```
+```python
 animals = ['cat', 'dog', 'monkey']
 for idx, animal in enumerate(animals):
     print ('#%d: %s' % (idx + 1, animal))
@@ -15,7 +15,7 @@ for idx, animal in enumerate(animals):
 
 #### Dictionaries（字典）
 It is easy to iterate over the keys in a dictionary:(迭代ｋｅｙ)
-```
+```python
 d = {'person': 2, 'cat': 4, 'spider': 8}
 for animal in d:
     legs = d[animal]
@@ -26,7 +26,7 @@ A cat has 4 legs<Br/>
 A spider has 8 legs<Br/>
 
 If you want access to keys and their corresponding values, use the iteritems method:<Br/>
-```
+```python
 d = {'person': 2, 'cat': 4, 'spider': 8}
 for animal, legs in d.iteritems():
     print 'A %s has %d legs' % (animal, legs)
@@ -36,7 +36,8 @@ A spider has 8 legs<Br/>
 A cat has 4 legs<Br/>
 
 Dictionary comprehensions: These are similar to list comprehensions, but allow you to easily construct dictionaries. For example:
-```nums = [0, 1, 2, 3, 4]
+```python
+nums = [0, 1, 2, 3, 4]
 even_num_to_square = {x: x ** 2 for x in nums if x % 2 == 0}
 print (even_num_to_square)
 ```
@@ -44,7 +45,7 @@ print (even_num_to_square)
 
 #### Sets（集合）
 A set is an unordered collection of distinct elements. As a simple example, consider the following:
-```
+```python
 animals = {'cat', 'dog'}
 print ('cat' in animals)   # Check if an element is in a set; prints "True"
 print ('fish' in animals)  # prints "False"
@@ -52,7 +53,7 @@ print ('fish' in animals)  # prints "False"
 True<Br/>
 False<Br/>
 
-```
+```python
 animals.add('fish')      # Add an element to a set
 print ('fish' in animals)
 print (len(animals))       # Number of elements in a set;
@@ -60,7 +61,7 @@ print (len(animals))       # Number of elements in a set;
 True<Br/>
 3<Br/>
 
-```
+```python
 animals.add('cat')       # Adding an element that is already in the set does nothing
 print len(animals)       
 animals.remove('cat')    # Remove an element from a set
@@ -70,7 +71,7 @@ print len(animals)
 2<Br/>
 
 Set comprehensions: Like lists and dictionaries, we can easily construct sets using set comprehensions:
-```
+```python
 from math import sqrt
 print ({int(sqrt(x)) for x in range(30)})
 ```
@@ -78,7 +79,7 @@ print ({int(sqrt(x)) for x in range(30)})
 
 #### Tuples(元组）
 A tuple is an (immutable) ordered list of values. A tuple is in many ways similar to a list; one of the most important differences is that tuples can be used as keys in dictionaries and as elements of sets, while lists cannot. Here is a trivial example:
-```
+```python
 d = {(x, x + 1): x for x in range(10)}  # Create a dictionary with tuple keys
 t = (5, 6)       # Create a tuple
 print (type(t))
@@ -88,16 +89,16 @@ print (d[(1, 2)])
 <class 'tuple'><Br/>
 5<Br/>
 1<Br/>
-```
+```python
 print(d)
 ```
-```
+```python
 {(0, 1): 0, (1, 2): 1, (2, 3): 2, (3, 4): 3, (4, 5): 4, (5, 6): 5, (6, 7): 6, (7, 8): 7, (8, 9): 8, (9, 10): 9}
 ```
 
 ### Functions
 Python functions are defined using the `def` keyword. For example:
-```
+```python
 def sign(x):
     if x > 0:
         return 'positive'
@@ -109,13 +110,13 @@ def sign(x):
 for x in [-1, 0, 1]:
     print sign(x)
 ```
-```
+```python
 negative
 zero
 positive
 ```
 We will often define functions to take optional keyword arguments, like this:
-```
+```python
 def hello(name, loud=False):
     if loud:
         print 'HELLO, %s' % name.upper()
@@ -125,13 +126,13 @@ def hello(name, loud=False):
 hello('Bob')
 hello('Fred', loud=True)
 ```
-```
+```python
 Hello, Bob!
 HELLO, FRED
 ```
 ### Classes
 The syntax for defining classes in Python is straightforward:
-```
+```python
 class Greeter:
 
     # Constructor
@@ -149,88 +150,88 @@ g = Greeter('Fred')  # Construct an instance of the Greeter class
 g.greet()            # Call an instance method; prints "Hello, Fred"
 g.greet(loud=True)   # Call an instance method; prints "HELLO, FRED!"
 ```
-```
+```python
 Hello, Fred
 HELLO, FRED!
 ```
 ## Numpy
 Numpy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays. If you are already familiar with MATLAB, you might find this [tutorial](http://wiki.scipy.org/NumPy_for_Matlab_Users) useful to get started with Numpy.<Br/>
 To use Numpy, we first need to import the `numpy` package:
-```
+```python
 import numpy as np
 ```
 ### Arrays
 A numpy array is a grid of values, all of the same type, and is indexed by a tuple of nonnegative integers. The number of dimensions is the rank of the array; the shape of an array is a tuple of integers giving the size of the array along each dimension.<Br/>
 We can initialize numpy arrays from nested（嵌入的） Python lists, and access elements using square brackets(方括号）:<Br/>
-```
+```python
 a = np.array([1, 2, 3])  # Create a rank 1 array
 print type(a), a.shape, a[0], a[1], a[2]
 a[0] = 5                 # Change an element of the array
 print a                  
 ```
-```
+```python
 <type 'numpy.ndarray'> (3,) 1 2 3
 [5 2 3]
 ```
-```
+```python
 b = np.array([[1,2,3],[4,5,6]])   # Create a rank 2 array
 print (b)
 ```
-```
+```python
 [[1 2 3]
  [4 5 6]]
  ```
- ```
+ ```python
  print (b.shape)                   
 print (b[0, 0], b[0, 1], b[1, 0])
 ```
-```
+```python
 (2, 3)
 1 2 4
 ```
-```
+```python
 a = np.zeros((2,2))  # Create an array of all zeros
 print (a)
 ```
-```
+```python
 [[ 0.  0.]
  [ 0.  0.]]
  ```
-```
+```python
 b = np.ones((1,2))   # Create an array of all ones
 print b
 ```
-```
+```python
 [[1. 1.]]
 ```
-```
+```python
 c = np.full((2,2), 7) # Create a constant array
 print c 
 ```
-```
+```python
 [[ 7.  7.]
  [ 7.  7.]]
  ```
-```
+```python
 d = np.eye(2)        # Create a 2x2 identity matrix
 print d
 ```
-```
+```python
 [[ 1.  0.]
  [ 0.  1.]]
  ```
-```
+```python
 e = np.random.random((2,2)) # Create an array filled with random values
 print (e)
 ```
-```
+```python
 [[ 0.09477679  0.79267634]
  [ 0.78291274  0.38962829]]
  ```
 ### Array indexing
 Numpy offers several ways to index into arrays.<Br/>
 Slicing: Similar to Python lists, numpy arrays can be sliced. Since arrays may be multidimensional, you must specify a slice for each dimension of the array:<br/>
-```
+```python
 import numpy as np
 
 # Create the following rank 2 array with shape (3, 4)
@@ -246,33 +247,33 @@ a = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])
 b = a[:2, 1:3]#切片的方法＝结果是同维度的　 a[2, 1:3]＝降一个维度
 print (b)
 ```
-```
+```python
 [[2 3]
  [6 7]]
  ```
  A slice of an array is a view into the same data, so modifying it will modify the original array.
- ```
+ ```python
  print (a[0, 1])  
 b[0, 0] = 77    # b[0, 0] is the same piece of data as a[0, 1]
 print (a[0, 1])
 ```
-```
+```python
 2
 77
 ```
 You can also mix integer indexing with slice indexing. However, doing so will yield an array of lower rank（降维度） than the original array. Note that this is quite different from the way that MATLAB handles array slicing:
-```
+```python
 # Create the following rank 2 array with shape (3, 4)
 a = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])
 print (a)
 ```
-```
+```python
 [[ 1  2  3  4]
  [ 5  6  7  8]
  [ 9 10 11 12]]
  ```
  Two ways of accessing the data in the middle row of the array. Mixing integer indexing with slices yields an array of lower rank, while using only slices yields an array of the same rank as the original array:
- ```
+ ```python
  row_r1 = a[1, :]    # Rank 1 view of the second row of a  
 row_r2 = a[1:2, :]  # Rank 2 view of the second row of a
 row_r3 = a[[1], :]  # Rank 2 view of the second row of a
@@ -280,12 +281,12 @@ print (row_r1, row_r1.shape)
 print (row_r2, row_r2.shape)
 print (row_r3, row_r3.shape)
 ```
-```
+```python
 [5 6 7 8] (4,)#　降一个维度
 [[5 6 7 8]] (1, 4)
 [[5 6 7 8]] (1, 4)
 ```
-```
+```python
 # We can make the same distinction when accessing columns of an array:
 col_r1 = a[:, 1]
 col_r2 = a[:, 1:2]
@@ -293,7 +294,7 @@ print (col_r1, col_r1.shape)
 print()
 print (col_r2, col_r2.shape)
 ```
-```
+```python
 [ 2  6 10] (3,)
 
 [[ 2]
@@ -301,7 +302,7 @@ print (col_r2, col_r2.shape)
  [10]] (3, 1)
  ```
  Integer array indexing: When you index into numpy arrays using slicing, the resulting array view will always be a subarray （子数组）of the original array. In contrast, integer array indexing allows you to construct arbitrary(任意的） arrays using the data from another array. Here is an example:
-```
+```python
 a = np.array([[1,2], [3, 4], [5, 6]])# 使用列表构建数组　[[1,2], [3, 4], [5, 6]]　是一个列表
 
 # An example of integer array indexing.
@@ -311,49 +312,49 @@ print (a[[0, 1, 2], [0, 1, 0]])　＃[[0, 1, 2], [0, 1, 0]]是一个列表　这
 # The above example of integer array indexing is equivalent to this:
 print (np.array([a[0, 0], a[1, 1], a[2, 0]]))　＃[a[0, 0], a[1, 1], a[2, 0]]是一个列表　然后通过np.array转换为数组
 ```
-```
+```python
 [1 4 5]
 [1 4 5]
 ```
 One useful trick with integer array indexing is selecting or mutating one element from each row of a matrix:
-```
+```python
 # Create a new array from which we will select elements
 a = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
 print (a)
 ```
-```
+```python
 [[ 1  2  3]
  [ 4  5  6]
  [ 7  8  9]
  [10 11 12]]
  ```
-```
+```python
 # Create an array of indices
 b = np.array([0, 2, 0, 1])
 # Select one element from each row of a using the indices in b
 print (a[np.arange(4), b])  # Prints "[ 1  6  7 11]"
 ```
-```
+```python
 [ 1  6  7 11]
 ```
-```
+```python
 [np.arange(4),b]
 ```
 ### Datatypes
 Every numpy array is a grid of elements of the same type. Numpy provides a large set of numeric datatypes that you can use to construct arrays. Numpy tries to guess a datatype when you create an array, but functions that construct arrays usually also include an optional argument to explicitly specify the datatype. Here is an example:
-```
+```python
 x = np.array([1, 2])  # Let numpy choose the datatype
 y = np.array([1.0, 2.0])  # Let numpy choose the datatype
 z = np.array([1, 2], dtype=np.int64)  # Force a particular datatype
 
 print x.dtype, y.dtype, z.dtype
 ```
-```
+```python
 int64 float64 int64
 ```
 ### Array math
 Note that unlike MATLAB, * is elementwise multiplication, not matrix multiplication. We instead use the dot function to compute inner products of vectors, to multiply a vector by a matrix, and to multiply matrices. dot is available both as a function in the numpy module and as an instance method of array objects:
-```
+```python
 x = np.array([[1,2],[3,4]])
 y = np.array([[5,6],[7,8]])
 
@@ -364,34 +365,34 @@ w = np.array([11, 12])
 print (v.dot(w))
 print (np.dot(v, w))
 ```
-```
+```python
 219
 219
 ```
-```
+```python
 # Matrix / vector product; both produce the rank 1 array [29 67]
 print x.dot(v)
 print np.dot(x, v)
 ```
-```
+```python
 [29 67]
 [29 67]
 ```
-```
+```python
 # Matrix / matrix product; both produce the rank 2 array
 # [[19 22]
 #  [43 50]]
 print x.dot(y)
 print np.dot(x, y)
 ```
-```
+```python
 [[19 22]
  [43 50]]
 [[19 22]
  [43 50]]
  ```
  Numpy provides many useful functions for performing computations on arrays; one of the most useful is `sum`:
- ```
+ ```python
  x = np.array([[1,2],[3,4]])
 
 print np.sum(x) # Compute sum of all elements; prints "10"
@@ -412,28 +413,28 @@ print np.sum(x, axis=1)  # Compute sum of each row; prints "[3 7]"
 
 #prints "[3 7]"
 ```
-```
+```python
 10
 [4 6]
 [3 7]
 ```
 Apart from computing mathematical functions using arrays, we frequently need to reshape or otherwise manipulate data in arrays. The simplest example of this type of operation is transposing a matrix; to transpose a matrix, simply use the T attribute of an array object:
-```
+```python
 print x
 print x.T
 ```
-```
+```python
 [[1 2]
  [3 4]]
 [[1 3]
  [2 4]]
  ```
-```
+```python
 v = np.array([[1,2,3]])
 print v 
 print v.T
 ```
-```
+```python
 [1 2 3]
 [1 2 3]
 ```
@@ -442,7 +443,7 @@ Broadcasting is a powerful mechanism that allows numpy to work with arrays of di
 
 For example, suppose that we want to add a constant vector to each row of a matrix. We could do it like this:
 
-```
+```python
 # We will add the vector v to each row of the matrix x,
 # storing the result in the matrix y
 x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
@@ -455,7 +456,7 @@ for i in range(4):
 
 print y
 ```
-```
+```python
 [[ 2  2  4]
  [ 5  5  7]
  [ 8  8 10]
@@ -463,20 +464,20 @@ print y
  ```
 This works; however when the matrix x is very large, computing an explicit loop in Python could be slow. Note that adding the vector v to each row of the matrix x is equivalent to forming a matrix vv by stacking multiple copies of v vertically, then performing elementwise summation of x and vv. We could implement this approach like this:
 
-```
+```python
 vv = np.tile(v, (4, 1))  # Stack 4 copies of v on top of each other
 print vv                 # Prints "[[1 0 1]
                          #          [1 0 1]
                          #          [1 0 1]
                          #          [1 0 1]]"
 ```
-```
+```python
 [[1 0 1]
  [1 0 1]
  [1 0 1]
  [1 0 1]]
 ```
-```
+```python
 y = x + vv  # Add x and vv elementwise
 print y
 [[ 2  2  4]
@@ -486,7 +487,7 @@ print y
  ```
 Numpy broadcasting allows us to perform this computation without actually creating multiple copies of v. Consider this version, using broadcasting:
 
-```
+```python
 import numpy as np
 
 # We will add the vector v to each row of the matrix x,
@@ -496,7 +497,7 @@ v = np.array([1, 0, 1])
 y = x + v  # Add v to each row of x using broadcasting
 print y
 ```
-```
+```python
 [[ 2  2  4]
  [ 5  5  7]
  [ 8  8 10]
@@ -518,7 +519,7 @@ Functions that support broadcasting are known as universal functions. You can fi
 
 Here are some applications of broadcasting:
 
-```
+```python
 # Compute outer product of vectors
 v = np.array([1,2,3])  # v has shape (3,)
 w = np.array([4,5])    # w has shape (2,)
@@ -529,13 +530,13 @@ w = np.array([4,5])    # w has shape (2,)
 print (np.reshape(v, (3, 1)) * w)
 print((np.reshape(v, (3, 1))).shape)
 ```
-```
+```python
 [[ 4  5]
  [ 8 10]
  [12 15]]
 (3, 1)
 ```
-```
+```python
 # Add a vector to each row of a matrix
 x = np.array([[1,2,3], [4,5,6]])
 # x has shape (2, 3) and v has shape (3,) so they broadcast to (2, 3),
@@ -543,11 +544,11 @@ x = np.array([[1,2,3], [4,5,6]])
 
 print x + v
 ```
-```
+```python
 [[2 4 6]
  [5 7 9]]
 ```
-```
+```python
 # Add a vector to each column of a matrix
 # x has shape (2, 3) and w has shape (2,).
 # If we transpose x then it has shape (3, 2) and can be broadcast
@@ -557,28 +558,28 @@ print x + v
 
 print (x.T + w).T
 ```
-```
+```python
 [[ 5  6  7]
  [ 9 10 11]]
 ```
-```
+```python
 # Another solution is to reshape w to be a row vector of shape (2, 1);
 # we can then broadcast it directly against x to produce the same
 # output.
 print x + np.reshape(w, (2, 1))
 ```
-```
+```python
 [[ 5  6  7]
  [ 9 10 11]]
 ```
-```
+```python
 # Multiply a matrix by a constant:
 # x has shape (2, 3). Numpy treats scalars as arrays of shape ();
 # these can be broadcast together to shape (2, 3), producing the
 # following array:
 print x * 2
 ```
-```
+```python
 [[ 2  4  6]
  [ 8 10 12]]
 ```
@@ -587,18 +588,18 @@ Broadcasting typically makes your code more concise and faster, so you should st
 This brief overview has touched on many of the important things that you need to know about numpy, but is far from complete. Check out the numpy reference to find out much more about numpy.
 ## Matplotlib
 Matplotlib is a plotting library. In this section give a brief introduction to the matplotlib.pyplot module, which provides a plotting system similar to that of MATLAB.
-```
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 ```
 By running this special iPython command, we will be displaying plots inline:
-```
+```python
 %matplotlib inline
 ```
 ### Plotting
 The most important function in matplotlib is plot, which allows you to plot 2D data. Here is a simple example:
 
-```
+```python
 # Compute the x and y coordinates for points on a sine curve
 x = np.arange(0, 3 * np.pi, 0.1)
 y = np.sin(x)
@@ -606,6 +607,11 @@ y = np.sin(x)
 # Plot the points using matplotlib
 plt.plot(x, y)
 ```
+### 打印字典里所有的键值
+```python
+for key in DataSets.keys():#说明 DataSets 是一个字典 有5个元素
+    print(key)
+```    
 
 
 
