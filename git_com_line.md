@@ -2,7 +2,8 @@ git常用命令
 创建README.md: echo “# notebook” >> README.md 
 将一个文件夹初始化为一个git仓库：$ git init
 ```
-跟踪文件：$ git add xxx
+跟踪文件：$ git add xxx 
+删除文件：$ git rm xxx
 显示当前git的状态：$ git status
 将跟踪后的文件提交：$ git commit -m ‘xxxx’
 推送到远程仓库：git push -u origin master
