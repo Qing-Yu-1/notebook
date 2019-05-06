@@ -63,3 +63,7 @@ git tag -a v1.4 -m 'my version 1.4'
 git push origin --tags
 git push origin v1.5
 ```
+### .gitignore
+Create a file named .gitignore in your project's directory. Ignore directories by entering the directory name into the file (with a slash appended):
+
+`dir_to_ignore/`
