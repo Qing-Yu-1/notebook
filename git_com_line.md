@@ -56,3 +56,10 @@ git push -u origin master
 ```
 my common profile
 git@github.com:Qing-Yu-1/notebook.git
+### 标签
+```
+创建一个含附注类型的标签非常简单，用 -a （译注：取 annotated 的首字母）指定标签名字即可：
+git tag -a v1.4 -m 'my version 1.4'
+git push origin --tags
+git push origin v1.5
+```
