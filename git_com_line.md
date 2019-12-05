@@ -67,3 +67,4 @@ git push origin v1.5
 Create a file named .gitignore in your project's directory. Ignore directories by entering the directory name into the file (with a slash appended):
 
 `dir_to_ignore/`
+.gitignore 文件中的要忽略的目录,如果之前这个目录被提交了,那么现在只是不更新这个目录,远程仓库还是会保留原来的目录和内容.
