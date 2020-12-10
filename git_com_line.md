@@ -9,17 +9,14 @@ git常用命令
 推送到远程仓库：git push -u origin master
 ```
 ```
-查看已提交后的文件：git log –pretty=format:”” –name-only -1　
+查看已提交后的文件：
 
-或者　git log –oneline –name-only -1 
-或者　git log –stat　（列出所有的提交历史的记录，显示文件名）
+或者  git log --oneline --name-only -1
+或者　git log –-stat　（列出所有的提交历史的记录，显示文件名）
 
 # –name-only 只显示文件名 
-git log –name-only -1 
-# –pretty=format:”” 格式化commit message 这里什么都不显示 
-git log –pretty=format:”” -1 
-# 最终 
-git log –pretty=format:”” –name-only -1 
+git log –-name-only -1 
+
 ```
 ```
 github仓库：https://github.com/qyzhizi/programme_python.git
